@@ -40,11 +40,11 @@ console.log(playerList[1].favorites[1]);
 
 // Q5 四則演算
 
-let zenin = 0;
+let total = 0;
 for (let i = 0; i < playerList.length; i++) {
-  zenin = zenin + playerList[i].age;
+  total = total + playerList[i].age;
 }
-let average = zenin / playerList.length;
+let average = total / playerList.length;
 console.log(average);
 
 
@@ -107,7 +107,7 @@ console.log( '5を3で割った余りは' + remainder(5, 3) + 'です。' );
 
 // Q1 標準組み込みオブジェクト
 
-let numb = Math.floor(Math.random() * 9);
+let numb = Math.floor(Math.random() * 10);
 console.log(numb);
 
 // Q2 コールバック関数
