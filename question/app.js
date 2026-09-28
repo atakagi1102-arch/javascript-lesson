@@ -3,7 +3,7 @@
 let nickname = 'あすか';
 let age = 25;
 
-console.log(`私のニックネームは${nickname}です。年齢は${age}です。`);
+console.log('私のニックネームは' + nickname + 'です。年齢は' + age + '歳です。');
 
 // Q2 配列
 let languages = [ 'JavaScript', 'PHP', 'Ruby', 'Python', 'Go' ];
@@ -40,8 +40,13 @@ console.log(playerList[1].favorites[1]);
 
 // Q5 四則演算
 
-let average = (playerList[0].age + playerList[1].age + playerList[2].age)/3;
+let zenin = 0;
+for (let i = 0; i < playerList.length; i++) {
+  zenin = zenin + playerList[i].age;
+}
+let average = zenin / playerList.length;
 console.log(average);
+
 
 // Q6 関数
 function sayHello(){
@@ -102,7 +107,7 @@ console.log( '5を3で割った余りは' + remainder(5, 3) + 'です。' );
 
 // Q1 標準組み込みオブジェクト
 
-let numb = Math.floor(Math.random() * 9) + 1;
+let numb = Math.floor(Math.random() * 9);
 console.log(numb);
 
 // Q2 コールバック関数
@@ -130,12 +135,14 @@ console.log(numbers);
 // Q5 for × if
 let mixed = [4, '2', 5, '8', '9', 0, 1];
 
-for(let i = 0; i < mixed.length; i++){
-  if(typeof mixed[i] === 'number' && mixed[i] % 2 === 0){
-    console.log('even');
-  }else if(typeof mixed[i] === 'number' && mixed[i] % 2 === 1){
-    console.log('odd')
-  }else if(typeof mixed[i] !== 'number'){
+for (let i = 0; i < mixed.length; i++) {
+  if (typeof mixed[i] === 'number') {
+    if (mixed[i] % 2 === 0) {
+      console.log('even');
+    } else if (mixed[i] % 2 === 1) {
+      console.log('odd');
+    }
+  } else {
     console.log('not number');
   }
 }
